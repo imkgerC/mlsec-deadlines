@@ -58,22 +58,51 @@ function filterSub(conferences, allowedSubs) {
     return Object.fromEntries(Object.entries(conferences).filter(([t, c]) => allowedSubs.includes(c.sub)));
 }
 
-function filterDate(conferences, date) {
-    return conferences.filter(c => c.deadline > date);
-}
-
 function filterTitles(conferences, excludeTitles) {
     return Object.fromEntries(Object.entries(conferences).filter(([t, c]) => !excludeTitles.includes(c.title)));
+}
+
+function filterAfter(conferences, date) {
+    return conferences.filter(c => c.deadline >= date);
+}
+
+function filterBefore(conferences, date) {
+    return conferences.filter(c => c.deadline < date);
+}
+
+function formatRelativeTime(date1, date2 = new Date()) {
+    const units = [
+        { name: 'year', limit: 31536000000, inSeconds: 60 * 60 * 24 * 365 },
+        { name: 'month', limit: 2592000000, inSeconds: 60 * 60 * 24 * 30 },
+        { name: 'week', limit: 604800000, inSeconds: 60 * 60 * 24 * 7 }, 
+        { name: 'day', limit: 86400000, inSeconds: 60 * 60 * 24 },
+        { name: 'hour', limit: 3600000, inSeconds: 60 * 60 },
+        { name: 'minute', limit: 60000, inSeconds: 60 },
+        { name: 'second', limit: 1000, inSeconds: 1 }
+    ];
+
+    const diff = Math.abs(date1 - date2);
+    const formatter = new Intl.RelativeTimeFormat('en', { numeric: 'auto' });
+
+    for (const unit of units) {
+        if (diff >= unit.limit) {
+            const value = Math.floor(diff / unit.limit);
+            return formatter.format(Math.sign(date1 - date2) * value, unit.name);
+        }
+    }
+
+    return formatter.format(0, 'second'); // Default to "now" if the difference is very small
 }
 
 function getConferenceView(conference) {
     const container = document.createElement("div");
     container.classList.add("conference-container");
 
-    const secondsUntilDeadline = (conference.deadline - new Date()) / 1000;
-    const formatETA = (totalSeconds) => {
+    const formatETA = (deadline) => {
+        const now = new Date();
+        let totalSeconds = (conference.deadline - now) / 1000;
         if (totalSeconds < 1) {
-            return "passed";
+            return formatRelativeTime(deadline, now);
         }
         const leftPad = (s) => {
             s = "" + s;
@@ -107,15 +136,30 @@ function getConferenceView(conference) {
         return result;
     };
     
+    let acceptanceRate = "NaN";
+    if (conference.accept_rates) {
+        const mostRecent = conference.accept_rates[conference.accept_rates.length - 1];
+        acceptanceRate = mostRecent.str;
+    }
+
     container.innerHTML = `
     <div class="conference-info">
-        <span class="conference-title">${conference.title}</span>
+        <span>
+            <span class="custom-tooltip-container">
+                <a class="conference-title" href="${conference.conf.link}">${conference.title}</a>
+                <span class="custom-tooltip">
+                    Core Ranking: ${conference.rank.core} <br />
+                    Acceptance Rate: ${acceptanceRate}
+                </span>
+            </span>
+        </span>
         <span class="conference-extra-info">${conference.description}</span>
+        <span class="conference-extra-info">${conference.conf.date} @ ${conference.conf.place}</span>
     </div>
     <div class="conference-deadline-info">
-        <span class="conference-eta">${formatETA(secondsUntilDeadline)}</span>
+        <span class="conference-eta">${formatETA(conference.deadline)}</span>
         <span class="conference-extra-info">${conference.deadline.toLocaleString()}</span>
-        <span class="conference-extra-info">${conference.timeline.comment ? "Comment: " + conference.timeline.comment : "&nbsp;"}</span>
+        <span class="conference-extra-info">${conference.timeline.comment ? "Note: " + conference.timeline.comment : "&nbsp;"}</span>
     </div>
     `;
 
@@ -123,11 +167,19 @@ function getConferenceView(conference) {
 }
 
 function showConferences(conferences) {
+    const now = new Date();
+    const upcomingConferences = filterAfter(conferences, now);
     // assumes conferences are sorted by deadline
     const shadowDom = document.createElement("div");
     shadowDom.id = "app";
-    
-    for (const conference of conferences) {
+    shadowDom.innerHTML = `<h3>Upcoming deadlines</h3>`;
+    for (const conference of upcomingConferences) {
+        shadowDom.appendChild(getConferenceView(conference));
+    }
+
+    const pastConferences = filterBefore(conferences, now);
+    shadowDom.innerHTML += `<h3>Past deadlines</h3>`;
+    for (const conference of pastConferences.reverse()) {
         shadowDom.appendChild(getConferenceView(conference));
     }
 
@@ -148,8 +200,7 @@ function updateView() {
     ];
     filteredConferenceData = filterTitles(filteredConferenceData, conferenceExcludeList);
     let conferences = expandConferences(filteredConferenceData);
-    let afterNow = filterDate(conferences, new Date());
-    showConferences(afterNow);
+    showConferences(conferences);
 }
 
 function main() {

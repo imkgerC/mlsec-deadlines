@@ -48,12 +48,45 @@
         .conference-title {
             color: #058;
             font-weight: 600;
+            text-decoration: none;
         }
         .conference-title:after {
             content: "";
             display: block;
             width: 30px;
             border-bottom: 2px solid #377d88;
+        }
+        h3 {
+            font-weight: 400;
+        }
+
+        .custom-tooltip-container {
+          position: relative;
+          display: inline-block;
+          cursor: pointer;
+        }
+
+        .custom-tooltip {
+          visibility: hidden;
+          background-color: white;
+          text-align: left;
+          padding: 10px;
+          padding-top: 5px;
+          border-radius: 8px;
+          position: absolute;
+          font-size: 0.8em;
+          width: 20em;
+
+          top: 100%; /* Position below the container */
+          left: 50%; /* Center horizontally */
+          transform: translateY(10px); /* Slightly move it down */
+          z-index: 10;
+
+          border: 1px solid black;
+        }
+
+        .custom-tooltip-container:hover .custom-tooltip {
+          visibility: visible;
         }
     
     </style>
