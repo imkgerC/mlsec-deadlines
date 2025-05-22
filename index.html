@@ -8,8 +8,10 @@
     <title>MLSec Deadlines</title>
     <script src="index.js"></script>
     <style>
+
         * {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 20px;            
         }
         #app {
             width: min(100%, 800px);
@@ -19,13 +21,12 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            border: 1px solid black;
-            border-radius: 2px;
+            border-left: 4px solid #666;
+            border-radius: .25rem;
             margin-bottom: 1rem;
-            padding: 0.3em;
         }
         .conference-deadline-info {
-            width: 20em;
+            width: 18em;
             display: grid;
             text-align: end;
         }
@@ -37,11 +38,22 @@
             flex-wrap: wrap;
             flex-direction: column;
             grid-template-columns: 100%;
-            width: 24em;
+            width: 20em;
+            padding-left: 0.6em;
         }
         .conference-extra-info {
             font-size: 0.8em;
             color: gray;
+        }
+        .conference-title {
+            color: #058;
+            font-weight: 600;
+        }
+        .conference-title:after {
+            content: "";
+            display: block;
+            width: 30px;
+            border-bottom: 2px solid #377d88;
         }
     
     </style>
