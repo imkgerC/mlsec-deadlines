@@ -1,4 +1,7 @@
 var conferenceData = undefined;
+var SETTINGS = {
+    "stress-toggle": true,
+};
 
 async function loadData() {
     const YAML = await import("https://cdn.jsdelivr.net/npm/yaml@2.8.0/+esm");
@@ -101,7 +104,7 @@ function getConferenceView(conference) {
     const formatETA = (deadline) => {
         const now = new Date();
         let totalSeconds = (conference.deadline - now) / 1000;
-        if (totalSeconds < 1) {
+        if (totalSeconds < 1 || !SETTINGS["stress-toggle"]) {
             return formatRelativeTime(deadline, now);
         }
         const leftPad = (s) => {
@@ -203,13 +206,26 @@ function updateView() {
     showConferences(conferences);
 }
 
+function settingsHandler() {
+    const dialog = document.querySelector("#settings");
+
+    const stressToggle = dialog.querySelector("#stress-toggle");
+    SETTINGS["stress-toggle"] = stressToggle.checked;
+}
+
 function main() {
     loadData().then(result => {
         conferenceData = result;
-        console.log(conferenceData)
         updateView();
-        console.log(setInterval(updateView, 500))
+        setInterval(updateView, 500);
     });
+
+    document.querySelector("#settings-wheel").onclick = () => {
+        document.querySelector("#settings").showModal();
+    };
+    const dialog = document.querySelector("#settings");
+    dialog.closedby = "any";
+    dialog.addEventListener("close", settingsHandler);
 }
 
 window.onload = main;
