@@ -23,15 +23,13 @@
             flex-wrap: wrap;
             border-left: 4px solid #666;
             border-radius: .25rem;
-            margin-bottom: 1rem;
+            margin-bottom: .5rem;
+            padding-bottom: .5rem;
         }
         .conference-deadline-info {
             width: 18em;
             display: grid;
             text-align: end;
-        }
-        .conference-eta {
-            font-size: 1.2em;
         }
         .conference-info {
             display: flex;
@@ -41,6 +39,25 @@
             width: 20em;
             padding-left: 0.6em;
         }
+        @media (width <= 800px) {
+          .conference-container {
+            border-left: none;
+            border-bottom: 1px solid #666;
+            border-radius: 0;
+          }
+          .conference-info {
+              width: 100%;
+          }
+          .conference-deadline-info {
+              width: 100%;
+              text-align: start;
+              padding-left: 0.6em;
+          }
+        }
+        .conference-eta {
+            font-size: 1.2em;
+        }
+        
         .conference-extra-info {
             font-size: 0.8em;
             color: gray;
