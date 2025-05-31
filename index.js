@@ -22,6 +22,49 @@ async function loadData() {
             result[entry.title] = {...result[entry.title], ...entry}
         }
     }
+    
+    // really hacky parsing from Guofei Gu's homepage
+    const guofeiGuResponse = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent('https://people.engr.tamu.edu/guofei/sec_conf_stat.htm')}`);
+    const domParser = new DOMParser();
+    const guoFeiDocument = domParser.parseFromString(await guofeiGuResponse.text(), "text/html");
+    const guoFeiTable = guoFeiDocument.querySelector("p + table > tbody");
+    const conferenceForColumn = {};
+    const regexp = /\d+[.]\d\%\((\d+)\/(\d+)/;
+    const normalizeName = (s) => {
+        return s
+            .replaceAll("IEEE", "")
+            .replaceAll("ACM", "")
+            .replaceAll(/\s+/g, " ")
+            .replace(/^\s/, "");
+    }
+    for (let i = 1; i < guoFeiTable.children.length; i++) {
+        const row = guoFeiTable.children[i];
+        if (i == 1) {
+            for (let j = 0; j < row.children.length; j++) {
+                const conferenceName = normalizeName(row.children[j].innerText);
+                conferenceForColumn[j+1] = conferenceName;
+            }
+            continue;
+        }
+        const year = Number.parseInt(row.children[0].innerText);
+        for (let j = 1; j < row.children.length; j++) {
+            if (!(conferenceForColumn[j] in result)) continue;
+            const match = row.children[j].innerText.match(regexp);
+            if (match) {
+                const entry = result[conferenceForColumn[j]];
+                if (!("accept_rates" in entry)) entry["accept_rates"] = [];
+                const submitted = Number.parseInt(match[2]);
+                const accepted = Number.parseInt(match[1]);
+                entry.accept_rates.push({
+                    "year": year,
+                    "submitted": submitted,
+                    "accepted": accepted,
+                    "rate": accepted/submitted,
+                });
+                result[entry.title] = entry;
+            }
+        }
+    }
 
     return result;
 }
@@ -139,10 +182,15 @@ function getConferenceView(conference) {
         return result;
     };
     
-    let acceptanceRate = "NaN";
+    let acceptanceRateHTML = "";
     if (conference.accept_rates) {
-        const mostRecent = conference.accept_rates[conference.accept_rates.length - 1];
-        acceptanceRate = mostRecent.str;
+        acceptanceRateHTML = "Acceptance Rates: <ul>";
+        for (const acceptRate of conference.accept_rates) {
+            const rate = acceptRate.accepted/acceptRate.submitted;
+            const description = `${acceptRate.year}: ${Math.round(rate*1000)/10}% (${acceptRate.accepted}/${acceptRate.submitted})`;
+            acceptanceRateHTML += `<li>${description}</li>`;
+        }
+        acceptanceRateHTML += "</ul>";
     }
 
     container.innerHTML = `
@@ -152,7 +200,7 @@ function getConferenceView(conference) {
                 <a class="conference-title" href="${conference.conf.link}">${conference.title}</a>
                 <span class="custom-tooltip">
                     Core Ranking: ${conference.rank.core} <br />
-                    Acceptance Rate: ${acceptanceRate}
+                    ${acceptanceRateHTML}
                 </span>
             </span>
         </span>
