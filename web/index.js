@@ -4,81 +4,22 @@ var SETTINGS = {
 };
 
 async function loadData() {
-    const YAML = await import("https://cdn.jsdelivr.net/npm/yaml@2.8.0/+esm");
-    
-    const acceptanceResponse = await fetch("https://ccfddl.com/conference/allacc.yml");
-    const acceptanceStatistics = await YAML.parse(await acceptanceResponse.text());
-    
-    const confResponse = await fetch("https://ccfddl.com/conference/allconf.yml");
-    const conferences = await YAML.parse(await confResponse.text());
-    
-    // transform data into canonical form
-    const result = {};
-    for (const entry of conferences) {
-        result[entry.title] = entry
-    }
-    for (const entry of acceptanceStatistics) {
-        if (entry.title in result) {
-            result[entry.title] = {...result[entry.title], ...entry}
-        }
-    }
-    
-    // really hacky parsing from Guofei Gu's homepage
-    const guofeiGuResponse = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent('https://people.engr.tamu.edu/guofei/sec_conf_stat.htm')}`);
-    const domParser = new DOMParser();
-    const guoFeiDocument = domParser.parseFromString(await guofeiGuResponse.text(), "text/html");
-    const guoFeiTable = guoFeiDocument.querySelector("p + table > tbody");
-    const conferenceForColumn = {};
-    const regexp = /\d+[.]\d\%\((\d+)\/(\d+)/;
-    const normalizeName = (s) => {
-        return s
-            .replaceAll("IEEE", "")
-            .replaceAll("ACM", "")
-            .replaceAll(/\s+/g, " ")
-            .replace(/^\s/, "");
-    }
-    for (let i = 1; i < guoFeiTable.children.length; i++) {
-        const row = guoFeiTable.children[i];
-        if (i == 1) {
-            for (let j = 0; j < row.children.length; j++) {
-                const conferenceName = normalizeName(row.children[j].innerText);
-                conferenceForColumn[j+1] = conferenceName;
-            }
-            continue;
-        }
-        const year = Number.parseInt(row.children[0].innerText);
-        for (let j = 1; j < row.children.length; j++) {
-            if (!(conferenceForColumn[j] in result)) continue;
-            const match = row.children[j].innerText.match(regexp);
-            if (match) {
-                const entry = result[conferenceForColumn[j]];
-                if (!("accept_rates" in entry)) entry["accept_rates"] = [];
-                const submitted = Number.parseInt(match[2]);
-                const accepted = Number.parseInt(match[1]);
-                entry.accept_rates.push({
-                    "year": year,
-                    "submitted": submitted,
-                    "accepted": accepted,
-                    "rate": accepted/submitted,
-                });
-                result[entry.title] = entry;
-            }
-        }
-    }
-
-    return result;
+    const response = await fetch("data/conferences.json");
+    return await response.json();
 }
 
 function expandConferences(conferenceData) {
     const results = [];
-    for (const [title, data] of Object.entries(conferenceData)) {
-        for (const conf of data.confs) {
-            for (const timeline of conf.timeline) {
-                if (timeline.deadline == "TBD") continue;
-                let timezone = conf.timezone;
-                if (timezone == "AoE") timezone = "UTC-12";
-                const deadline = new Date(timeline.deadline + " " + timezone);
-                results.push({...data, conf: conf, deadline: deadline, timeline: timeline});
+    for (const [key, data] of Object.entries(conferenceData)) {
+        for (const [year, conf] of Object.entries(data.conferences)) {
+            const conferenceStart = conf.timeline.find((e) => e.description == "Conference start");
+            let conferenceDate = "TBD";
+            if (conferenceStart) conferenceDate = new Date(conferenceStart.date);
+            for (const event_ of conf.timeline) {
+                if (event_.description == "Conference start") continue;
+                if (event_.description == "Conference end") continue;
+                const deadline = new Date(event_.date);
+                results.push({series: data, date: conferenceDate, year: year, conference: conf, deadline: deadline, event: event_});
             }
         }
     }
@@ -97,15 +38,15 @@ function filterRank(conferences, minimumRank) {
         if (rank in ranksToNumbers) return ranksToNumbers[rank];
         return -4;
     }
-    return Object.fromEntries(Object.entries(conferences).filter(([t, c]) => rankToNumber(c.rank.core) >= rankToNumber(minimumRank)));
+    return Object.fromEntries(Object.entries(conferences).filter(([t, c]) => rankToNumber(c.rankings.core) >= rankToNumber(minimumRank)));
 }
 
-function filterSub(conferences, allowedSubs) {
-    return Object.fromEntries(Object.entries(conferences).filter(([t, c]) => allowedSubs.includes(c.sub)));
+function filterCategory(conferences, allowedCategories) {
+    return Object.fromEntries(Object.entries(conferences).filter(([t, c]) => allowedCategories.includes(c.category)));
 }
 
 function filterTitles(conferences, excludeTitles) {
-    return Object.fromEntries(Object.entries(conferences).filter(([t, c]) => !excludeTitles.includes(c.title)));
+    return Object.fromEntries(Object.entries(conferences).filter(([t, c]) => !excludeTitles.includes(c.name)));
 }
 
 function filterAfter(conferences, date) {
@@ -183,34 +124,39 @@ function getConferenceView(conference) {
     };
     
     let acceptanceRateHTML = "";
-    if (conference.accept_rates) {
+    if (conference.series.acceptance_statistics && Object.entries(conference.series.acceptance_statistics).length > 1) {
         acceptanceRateHTML = "Acceptance Rates: <ul>";
-        for (const acceptRate of conference.accept_rates) {
-            const rate = acceptRate.accepted/acceptRate.submitted;
-            const description = `${acceptRate.year}: ${Math.round(rate*1000)/10}% (${acceptRate.accepted}/${acceptRate.submitted})`;
+        for (const [year, acceptance_statistics] of Object.entries(conference.series.acceptance_statistics)) {
+            const rate = acceptance_statistics.accepted/acceptance_statistics.submitted;
+            const description = `${year}: ${Math.round(rate*1000)/10}% (${acceptance_statistics.accepted}/${acceptance_statistics.submitted})`;
             acceptanceRateHTML += `<li>${description}</li>`;
         }
         acceptanceRateHTML += "</ul>";
+    }
+
+    let conferenceDate = conference.date;
+    if (conferenceDate instanceof Date) {
+        conferenceDate = conferenceDate.toDateString();
     }
 
     container.innerHTML = `
     <div class="conference-info">
         <span>
             <span class="custom-tooltip-container">
-                <a class="conference-title" href="${conference.conf.link}">${conference.title}</a>
+                <a class="conference-title" href="${conference.conference.link}">${conference.series.name}</a>
                 <span class="custom-tooltip">
-                    Core Ranking: ${conference.rank.core} <br />
+                    Core Ranking: ${conference.series.rankings.core} <br />
                     ${acceptanceRateHTML}
                 </span>
             </span>
         </span>
-        <span class="conference-extra-info">${conference.description}</span>
-        <span class="conference-extra-info">${conference.conf.date} @ ${conference.conf.place}</span>
+        <span class="conference-extra-info">${conference.series.description}</span>
+        <span class="conference-extra-info">${conferenceDate} @ ${conference.conference.location}</span>
     </div>
     <div class="conference-deadline-info">
         <span class="conference-eta">${formatETA(conference.deadline)}</span>
         <span class="conference-extra-info">${conference.deadline.toLocaleString()}</span>
-        <span class="conference-extra-info">${conference.timeline.comment ? "Note: " + conference.timeline.comment : "&nbsp;"}</span>
+        <span class="conference-extra-info">${conference.event.description ? "Note: " + conference.event.description : "&nbsp;"}</span>
     </div>
     `;
 
@@ -238,7 +184,9 @@ function showConferences(conferences) {
 }
 
 function updateView() {
-    filteredConferenceData = filterSub(conferenceData, ["SE", "AI", "SC"]);
+    filteredConferenceData = filterCategory(conferenceData, [
+        "Artificial Intelligence", "Software Engineering", "Security and Privacy"
+    ]);
     filteredConferenceData = filterRank(filteredConferenceData, "A");
     const conferenceExcludeList = [
         "TCC", "ICFP", "POPL", "FM", "EUROCRYPT", "PLDI", "HotOS",
