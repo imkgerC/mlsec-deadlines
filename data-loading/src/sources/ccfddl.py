@@ -120,6 +120,8 @@ class CCFDDL(DataSource):
         if r.status_code != 200:
             logger.error(f"Could not load {CCFDDL_BASE_URL}, status {r.status_code}")
             return
+        # is encoded as utf8 but response does not indicate that
+        r.encoding = r.apparent_encoding
         data = yaml.safe_load(strip_invalid_yaml(r.text))
 
         for entry in data:
@@ -179,6 +181,8 @@ class CCFDDL(DataSource):
         if r.status_code != 200:
             logger.error(f"Could not load {CCFDDL_ACCEPTANCE_URL}, status {r.status_code}")
             return
+        # is encoded as utf8 but response does not indicate that
+        r.encoding = r.apparent_encoding
         data = yaml.safe_load(strip_invalid_yaml(r.text))
 
         for entry in data:

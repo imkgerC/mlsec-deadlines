@@ -129,10 +129,10 @@ class Own(DataSource):
         )
 
     def initial_load_to(self, store):
-        if not os.path.exists("../web/data/conferences.json"):
+        if not os.path.exists("../docs/data/conferences.json"):
             return
         
-        with open("../web/data/conferences.json", "r") as f:
+        with open("../docs/data/conferences.json", "r", encoding="utf8") as f:
             data = json.load(f)
 
         for value in data.values():

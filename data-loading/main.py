@@ -21,5 +21,5 @@ if __name__ == "__main__":
         source.additional_load_to(store)
     
     
-    with open("../web/data/conferences.json", "w") as f:
+    with open("../docs/data/conferences.json", "w", encoding="utf8") as f:
         f.write(store.serialize())
