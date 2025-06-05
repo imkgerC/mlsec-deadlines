@@ -163,4 +163,5 @@ class ConferenceStore:
                 for (name, category), series in self.series.items()
             },
             default=str,
+            sort_keys=True,
         )
