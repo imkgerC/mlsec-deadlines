@@ -124,7 +124,7 @@ function getConferenceView(conference) {
     };
     
     let acceptanceRateHTML = "";
-    if (conference.series.acceptance_statistics && Object.entries(conference.series.acceptance_statistics).length > 1) {
+    if (conference.series.acceptance_statistics && Object.entries(conference.series.acceptance_statistics).length > 0) {
         acceptanceRateHTML = "Acceptance Rates: <ul>";
         for (const [year, acceptance_statistics] of Object.entries(conference.series.acceptance_statistics)) {
             const rate = acceptance_statistics.accepted/acceptance_statistics.submitted;
