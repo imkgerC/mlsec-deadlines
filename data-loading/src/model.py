@@ -59,11 +59,12 @@ class ConferenceStore:
         self.series: Dict[Tuple[str, Category], ConferenceSeries] = {}
     
     def add_or_merge_series(self, series: ConferenceSeries):
-        if (series.name, series.category) not in self.series:
-            self.series[(series.name, series.category)] = series
+        key = (series.name.lower(), series.category)
+        if key not in self.series:
+            self.series[key] = series
             return
         # already exists in store, so need to merge attributes
-        existing = self.series[(series.name, series.category)]
+        existing = self.series[key]
         
         # check for any inconsistencies that cannot be handled by merging
         if existing.description != series.description:
@@ -121,7 +122,7 @@ class ConferenceStore:
                     continue
                 existing.conferences[year].timeline.append(event)
 
-        self.series[(series.name, series.category)] = existing
+        self.series[key] = existing
 
     def normalize_series_name(self, name: str) -> str:
         # remove organization names
@@ -139,6 +140,7 @@ class ConferenceStore:
         return name
     
     def find_series(self, name: Optional[str] = None, category: Optional[Category] = None) -> List[ConferenceSeries]:
+        name = name.lower()
         if name is None and category is None:
             raise ValueError("To find series, supply either the name, category or both")
         if name is None:
