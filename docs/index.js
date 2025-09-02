@@ -49,6 +49,11 @@ function filterTitles(conferences, excludeTitles) {
     return Object.fromEntries(Object.entries(conferences).filter(([t, c]) => !excludeTitles.includes(c.name)));
 }
 
+function includeTitles(conferences, allConferences, includeTitles) {
+    const additionalConferences = Object.fromEntries(Object.entries(allConferences).filter(([t, c]) => includeTitles.includes(c.name)));
+    return {...conferences, ...additionalConferences};
+}
+
 function filterAfter(conferences, date) {
     return conferences.filter(c => c.deadline >= date);
 }
@@ -198,6 +203,10 @@ function updateView() {
         "ICDAR", "ICAPS", "ECCV", "EMNLP"
     ];
     filteredConferenceData = filterTitles(filteredConferenceData, conferenceExcludeList);
+    const conferenceIncludeList = [
+        "ACNS", "DIMVA", "EuroS&P", "SATML",
+    ];
+    filteredConferenceData = includeTitles(filteredConferenceData, conferenceData, conferenceIncludeList);
     let conferences = expandConferences(filteredConferenceData);
     showConferences(conferences);
 }
