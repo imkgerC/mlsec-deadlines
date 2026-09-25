@@ -6,6 +6,7 @@ import requests
 
 import daterangeparser
 from dateutil.parser import parse
+from dateutil import tz
 
 from .base import DataSource
 from ..model import (
@@ -17,6 +18,10 @@ from ..model import (
 logger = logging.getLogger(__name__)
 CCFDDL_BASE_URL = "https://ccfddl.com/conference/allconf.yml"
 CCFDDL_ACCEPTANCE_URL = "https://ccfddl.com/conference/allacc.yml"
+
+TZINFOS = {
+    "PT": tz.gettz("America/Los_Angeles"),
+}
 
 def strip_invalid_yaml(s):
     res = ''
@@ -69,7 +74,7 @@ class CCFDDL(DataSource):
             if timezone.lower() == "aoe":
                 timezone = "-12"
                 date = parse(event["deadline"] + f"{timezone}")
-            date = parse(event["deadline"] + f"{timezone}")
+            date = parse(event["deadline"] + f"{timezone}", tzinfos=TZINFOS)
             
             timeline.append(Event(
                 date=date,
