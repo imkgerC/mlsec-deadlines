@@ -166,4 +166,5 @@ class ConferenceStore:
             },
             default=str,
             sort_keys=True,
+            indent=True,
         )
