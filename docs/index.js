@@ -197,7 +197,7 @@ function updateView() {
         "TCC", "ICFP", "POPL", "FM", "EUROCRYPT", "PLDI", "HotOS",
         "UAI", "CRYPTO", "SOSP", "CSFW", "ASIACRYPT", "ISSRE", "CHES", "BMVC",
         "FC", "ICRA", "AISTATS", "OOPSLA", "SANER", "CAiSE", "ECOOP", "DSN",
-        "Middleware", "OSDI", "IJCAI", "ISSTA", "ESORICS", "ICPC", "CP", "RE",
+        "Middleware", "OSDI", "IJCAI", "ESORICS", "ICPC", "CP", "RE",
         "COLT", "ICSOC", "ICSOC", "ESEM", "MoDELS", "ICWS", "AAMAS", "IROS",
         "KR", "NAACL", "RSS", "ICSME", "ECAI", "PPSN", "WACV", "GECCO", "EASE",
         "ICDAR", "ICAPS", "ECCV", "EMNLP"
