@@ -204,7 +204,7 @@ function updateView() {
     ];
     filteredConferenceData = filterTitles(filteredConferenceData, conferenceExcludeList);
     const conferenceIncludeList = [
-        "ACNS", "DIMVA", "EuroS&P", "SATML",
+        "ACNS", "DIMVA", "EuroS&P", "SATML", "CODASPY"
     ];
     filteredConferenceData = includeTitles(filteredConferenceData, conferenceData, conferenceIncludeList);
     let conferences = expandConferences(filteredConferenceData);

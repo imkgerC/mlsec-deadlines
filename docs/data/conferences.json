@@ -452,7 +452,11 @@
     "timeline": [
      {
       "date": "2026-10-08 23:59:59-12:00",
-      "description": ""
+      "description": "Main track"
+     },
+     {
+      "date": "2026-12-11 23:59:59-12:00",
+      "description": "AAAI fast track; eligible AAAI-27 Main Technical Track resubmissions only"
      },
      {
       "date": "2027-05-03 00:00:00",
@@ -923,7 +927,7 @@
       "description": "ARR Submission"
      },
      {
-      "date": "2027-08-17 00:00:00",
+      "date": "2027-08-20 00:00:00",
       "description": "Conference start"
      },
      {
@@ -2964,6 +2968,28 @@
       "description": "Conference end"
      }
     ]
+   },
+   "2027": {
+    "link": "https://conferences.sigappfr.org/apweb2027/",
+    "location": "Guiyang, China / Online",
+    "timeline": [
+     {
+      "date": "2027-03-07 23:59:59-12:00",
+      "description": ""
+     },
+     {
+      "date": "2027-05-14 23:59:59-12:00",
+      "description": ""
+     },
+     {
+      "date": "2027-08-29 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-08-31 00:00:00",
+      "description": "Conference end"
+     }
+    ]
    }
   },
   "description": "APWeb-WAIM joint international conference on Web and Big Data",
@@ -4697,7 +4723,7 @@
     "location": "Pozna\u0144, Poland",
     "timeline": [
      {
-      "date": "2027-01-11 23:59:59-12:00",
+      "date": "2027-01-10 23:59:59-12:00",
       "description": ""
      },
      {
@@ -5386,6 +5412,24 @@
       "description": "Conference end"
      }
     ]
+   },
+   "2027": {
+    "link": "https://www.cgs-network.org/casaxr27/",
+    "location": "Xi'an, China",
+    "timeline": [
+     {
+      "date": "2027-02-04 23:59:59+00:00",
+      "description": ""
+     },
+     {
+      "date": "2027-06-04 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-06-06 00:00:00",
+      "description": "Conference end"
+     }
+    ]
    }
   },
   "description": "International Conference on Computer Animation and Social Agents",
@@ -5534,7 +5578,7 @@
       "description": ""
      },
      {
-      "date": "2027-07-19 00:00:00",
+      "date": "2027-07-21 00:00:00",
       "description": "Conference start"
      },
      {
@@ -5550,6 +5594,36 @@
    "ccf": "A",
    "core": "A*",
    "thcpl": "A"
+  }
+ },
+ "cc__CATEngineering": {
+  "acceptance_statistics": {},
+  "category": "Software Engineering",
+  "conferences": {
+   "2027": {
+    "link": "https://conf.researchr.org/home/CC-2027",
+    "location": "Salt Lake City, Utah, USA",
+    "timeline": [
+     {
+      "date": "2026-12-03 23:59:59-12:00",
+      "description": ""
+     },
+     {
+      "date": "2027-03-20 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-03-21 00:00:00",
+      "description": "Conference end"
+     }
+    ]
+   }
+  },
+  "description": "International Conference on Compiler Construction",
+  "name": "CC",
+  "rankings": {
+   "ccf": "B",
+   "core": "B"
   }
  },
  "ccc__CATTheory": {
@@ -6514,6 +6588,24 @@
       "description": "Conference end"
      }
     ]
+   },
+   "2027": {
+    "link": "https://www.computingfrontiers.org/2027/",
+    "location": "Trento, Italy",
+    "timeline": [
+     {
+      "date": "2027-01-25 23:59:59-12:00",
+      "description": ""
+     },
+     {
+      "date": "2027-05-25 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-05-27 00:00:00",
+      "description": "Conference end"
+     }
+    ]
    }
   },
   "description": "ACM International Conference on Computing Frontiers",
@@ -6670,7 +6762,7 @@
     "location": "Cairns, Australia",
     "timeline": [
      {
-      "date": "2027-04-20 23:59:59",
+      "date": "2027-04-21 11:59:59",
       "description": "Regular conference papers (LNCS proceedings track)"
      },
      {
@@ -8400,7 +8492,7 @@
     "location": "Fort Collins, Colorado, USA",
     "timeline": [
      {
-      "date": "2026-11-23 23:59:59-12:00",
+      "date": "2026-12-07 23:59:59-12:00",
       "description": ""
      },
      {
@@ -8760,6 +8852,20 @@
      },
      {
       "date": "2026-07-25 00:00:00",
+      "description": "Conference end"
+     }
+    ]
+   },
+   "2027": {
+    "link": "https://cognitivesciencesociety.org/cogsci-2027/",
+    "location": "Euskalduna Bilbao Convention Centre, Bilbao, Spain",
+    "timeline": [
+     {
+      "date": "2027-07-28 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-07-31 00:00:00",
       "description": "Conference end"
      }
     ]
@@ -9489,6 +9595,20 @@
       "description": "Conference end"
      }
     ]
+   },
+   "2027": {
+    "link": "https://www.cs.vu.nl/~wanf/profactivities.html",
+    "location": "Lucca, Italy",
+    "timeline": [
+     {
+      "date": "2027-09-06 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-09-10 00:00:00",
+      "description": "Conference end"
+     }
+    ]
    }
   },
   "description": "International Conference on Concurrency Theory",
@@ -10140,7 +10260,7 @@
     "location": "Tokyo, Japan",
     "timeline": [
      {
-      "date": "2026-11-25 23:59:59-12:00",
+      "date": "2026-12-05 23:59:59-12:00",
       "description": ""
      },
      {
@@ -11135,7 +11255,7 @@
       "description": "Round 1"
      },
      {
-      "date": "2026-11-01 23:59:59-12:00",
+      "date": "2026-11-15 23:59:59-12:00",
       "description": "Round 2"
      },
      {
@@ -11428,7 +11548,7 @@
       "description": ""
      },
      {
-      "date": "2027-06-20 00:00:00",
+      "date": "2027-06-22 00:00:00",
       "description": "Conference start"
      },
      {
@@ -11870,7 +11990,7 @@
     "location": "Shenyang, China",
     "timeline": [
      {
-      "date": "2026-11-25 23:59:00-12:00",
+      "date": "2026-11-25 23:59:59-12:00",
       "description": "Research papers"
      },
      {
@@ -11920,128 +12040,37 @@
    "2021": {
     "link": "https://date21.date-conference.com/",
     "location": "Virtual",
-    "timeline": [
-     {
-      "date": "2020-09-21 23:59:59+01:00",
-      "description": ""
-     },
-     {
-      "date": "2021-02-02 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2021-02-04 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2022": {
     "link": "https://date22.date-conference.com/",
     "location": "Virtual",
-    "timeline": [
-     {
-      "date": "2021-09-19 23:59:59-12:00",
-      "description": ""
-     },
-     {
-      "date": "2022-03-14 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2022-03-23 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2023": {
     "link": "https://www.date-conference.com/",
     "location": "Antwerp, BE",
-    "timeline": [
-     {
-      "date": "2022-09-25 23:59:59-12:00",
-      "description": ""
-     },
-     {
-      "date": "2023-04-17 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2023-04-19 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2024": {
     "link": "https://www.date-conference.com/",
     "location": "Valencia, Spain",
-    "timeline": [
-     {
-      "date": "2023-09-17 23:59:59-12:00",
-      "description": ""
-     },
-     {
-      "date": "2024-03-25 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2024-03-27 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2025": {
     "link": "https://www.date-conference.com/date-2025-call-papers",
     "location": "Palais des congr\u00e8s de Lyon, Lyon, France",
-    "timeline": [
-     {
-      "date": "2024-09-22 23:59:59-12:00",
-      "description": ""
-     },
-     {
-      "date": "2025-03-31 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2025-04-02 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2026": {
     "link": "https://www.date-conference.com/call-for-papers",
     "location": "Verona, Italy",
-    "timeline": [
-     {
-      "date": "2025-09-14 23:59:59-12:00",
-      "description": ""
-     },
-     {
-      "date": "2026-04-20 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2026-04-22 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2027": {
     "link": "https://www.date-conference.com/date-2027-call-papers",
     "location": "Dresden, Germany",
-    "timeline": [
-     {
-      "date": "2026-09-20 23:59:59-12:00",
-      "description": ""
-     },
-     {
-      "date": "2027-03-22 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2027-03-24 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    }
   },
   "description": "Design, Automation & Test in Europe",
@@ -13289,6 +13318,37 @@
    "thcpl": "B"
   }
  },
+ "ecaf__CATArtificialIntelligence": {
+  "acceptance_statistics": {},
+  "category": "Artificial Intelligence",
+  "conferences": {
+   "2027": {
+    "link": "https://2027.ecafconference.org/",
+    "location": "Vilnius, Lithuania",
+    "timeline": [
+     {
+      "date": "2027-03-25 23:59:59-12:00",
+      "description": "Regular full research papers. The 5 May 2027 notification publishes a date only; its clock time 23:59:59 and timezone AoE are repository defaults."
+     },
+     {
+      "date": "2027-08-25 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-08-27 00:00:00",
+      "description": "Conference end"
+     }
+    ]
+   }
+  },
+  "description": "European Conference on Algorithmic Fairness",
+  "name": "ECAF",
+  "rankings": {
+   "ccf": "N",
+   "core": "N",
+   "thcpl": "N"
+  }
+ },
  "ecai__CATArtificialIntelligence": {
   "acceptance_statistics": {
    "2022": {
@@ -13629,11 +13689,11 @@
       "description": ""
      },
      {
-      "date": "2027-03-21 00:00:00",
+      "date": "2027-03-22 00:00:00",
       "description": "Conference start"
      },
      {
-      "date": "2027-03-25 00:00:00",
+      "date": "2027-03-24 00:00:00",
       "description": "Conference end"
      }
     ]
@@ -14110,6 +14170,20 @@
       "description": "Conference end"
      }
     ]
+   },
+   "2027": {
+    "link": "https://ecscw.eusset.eu/2027/",
+    "location": "Limassol, Cyprus",
+    "timeline": [
+     {
+      "date": "2027-07-05 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-07-09 00:00:00",
+      "description": "Conference end"
+     }
+    ]
    }
   },
   "description": "European Conference on Computer Supported Cooperative Work",
@@ -14425,6 +14499,20 @@
      },
      {
       "date": "2026-07-03 00:00:00",
+      "description": "Conference end"
+     }
+    ]
+   },
+   "2027": {
+    "link": "https://www.egsr2027.usi.ch/",
+    "location": "Universit\u00e0 della Svizzera italiana, Lugano, Switzerland",
+    "timeline": [
+     {
+      "date": "2027-07-05 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-07-07 00:00:00",
       "description": "Conference end"
      }
     ]
@@ -15039,7 +15127,7 @@
     "location": "Bruges, Belgium and Online",
     "timeline": [
      {
-      "date": "2026-11-19 03:59:59-08:00",
+      "date": "2026-11-26 03:59:59-08:00",
       "description": ""
      },
      {
@@ -16388,7 +16476,7 @@
     "location": "Lucca, Italy",
     "timeline": [
      {
-      "date": "2026-10-02 11:59:00",
+      "date": "2026-10-02 12:59:00",
       "description": ""
      },
      {
@@ -16887,6 +16975,10 @@
     "link": "https://eurovis27.github.io/web/",
     "location": "Stuttgart, Germany",
     "timeline": [
+     {
+      "date": "2026-12-02 23:59:59-12:00",
+      "description": "Full papers"
+     },
      {
       "date": "2027-05-31 00:00:00",
       "description": "Conference start"
@@ -17813,6 +17905,20 @@
       "description": "Conference end"
      }
     ]
+   },
+   "2028": {
+    "link": "https://www.usenix.org/conference/fast28",
+    "location": "Seattle, WA, USA",
+    "timeline": [
+     {
+      "date": "2028-02-28 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2028-03-01 00:00:00",
+      "description": "Conference end"
+     }
+    ]
    }
   },
   "description": "USENIX Conference on File and Storage Technologies",
@@ -17994,106 +18100,32 @@
    "2021": {
     "link": "https://www.fccm.org/past/2021/",
     "location": "Virtual",
-    "timeline": [
-     {
-      "date": "2021-01-18 23:59:59-12:00",
-      "description": ""
-     },
-     {
-      "date": "2021-05-10 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2021-05-11 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2022": {
     "link": "https://www.fccm.org/",
     "location": "New York City, USA",
-    "timeline": [
-     {
-      "date": "2022-01-17 23:59:59-12:00",
-      "description": ""
-     },
-     {
-      "date": "2022-05-16 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2022-05-17 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2023": {
     "link": "https://www.fccm.org/past/2023/",
     "location": "Marina del Rey, California, USA",
-    "timeline": [
-     {
-      "date": "2023-05-09 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2023-05-10 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2024": {
     "link": "https://www.fccm.org/",
     "location": "Orlando, USA",
-    "timeline": [
-     {
-      "date": "2024-01-15 23:59:59-12:00",
-      "description": ""
-     },
-     {
-      "date": "2024-05-05 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2024-05-07 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2025": {
     "link": "https://www.fccm.org/",
     "location": "Fayetteville, Arkansas, USA",
-    "timeline": [
-     {
-      "date": "2025-01-19 19:59:00-12:00",
-      "description": ""
-     },
-     {
-      "date": "2025-05-04 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2025-05-06 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2026": {
     "link": "https://www.fccm.org/past/2026/",
     "location": "Atlanta, Georgia, USA",
-    "timeline": [
-     {
-      "date": "2026-01-17 23:59:59-12:00",
-      "description": ""
-     },
-     {
-      "date": "2026-05-14 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2026-05-15 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    }
   },
   "description": "IEEE Symposium on Field-Programmable Custom Computing Machines",
@@ -18224,15 +18256,15 @@
     "location": "Marrakesh, Morocco",
     "timeline": [
      {
-      "date": "2026-10-16 23:59:59-12:00",
+      "date": "2026-10-30 23:59:59-12:00",
       "description": ""
      },
      {
-      "date": "2027-04-26 00:00:00",
+      "date": "2027-04-27 00:00:00",
       "description": "Conference start"
      },
      {
-      "date": "2027-04-30 00:00:00",
+      "date": "2027-04-29 00:00:00",
       "description": "Conference end"
      }
     ]
@@ -19210,6 +19242,10 @@
     "link": "https://fscd-cade.science.ru.nl/",
     "location": "Nijmegen, Netherlands",
     "timeline": [
+     {
+      "date": "2027-04-26 23:59:59-12:00",
+      "description": ""
+     },
      {
       "date": "2027-08-23 00:00:00",
       "description": "Conference start"
@@ -21451,6 +21487,24 @@
       "description": "Conference end"
      }
     ]
+   },
+   "2027": {
+    "link": "https://hpdc.sci.utah.edu/2027/",
+    "location": "Atlanta, GA, USA",
+    "timeline": [
+     {
+      "date": "2027-01-18 23:59:59-12:00",
+      "description": ""
+     },
+     {
+      "date": "2027-06-07 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-06-09 00:00:00",
+      "description": "Conference end"
+     }
+    ]
    }
   },
   "description": "ACM Symposium on High-Performance Parallel and Distributed Computing",
@@ -21579,7 +21633,7 @@
     "timeline": [
      {
       "date": "2026-11-05 23:59:59-12:00",
-      "description": ""
+      "description": "Regular papers; papers submitted by the deadline may be updated until November 6, 2026 23:59:59 AoE"
      },
      {
       "date": "2027-05-17 00:00:00",
@@ -22153,6 +22207,20 @@
      },
      {
       "date": "2026-09-17 00:00:00",
+      "description": "Conference end"
+     }
+    ]
+   },
+   "2027": {
+    "link": "https://e-nns.org/icann2027/",
+    "location": "Link\u00f6ping, Sweden",
+    "timeline": [
+     {
+      "date": "2027-08-24 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-08-27 00:00:00",
       "description": "Conference end"
      }
     ]
@@ -23264,11 +23332,11 @@
     "location": "Hong Kong, China",
     "timeline": [
      {
-      "date": "2027-10-02 00:00:00",
+      "date": "2027-10-05 00:00:00",
       "description": "Conference start"
      },
      {
-      "date": "2027-10-08 00:00:00",
+      "date": "2027-10-07 00:00:00",
       "description": "Conference end"
      }
     ]
@@ -23422,8 +23490,12 @@
     "location": "Kuala Lumpur, Malaysia",
     "timeline": [
      {
-      "date": "2027-02-20 23:59:59-12:00",
-      "description": ""
+      "date": "2026-11-15 23:59:59-12:00",
+      "description": "Journal track; initial decision Jan 15, revised submission Apr 1"
+     },
+     {
+      "date": "2027-03-05 23:59:59-12:00",
+      "description": "Conference track"
      },
      {
       "date": "2027-08-18 00:00:00",
@@ -23578,6 +23650,10 @@
     "link": "https://icdcs2027.icdcs.org/",
     "location": "Melbourne, Australia",
     "timeline": [
+     {
+      "date": "2027-01-13 23:59:59-12:00",
+      "description": ""
+     },
      {
       "date": "2027-07-05 00:00:00",
       "description": "Conference start"
@@ -24061,7 +24137,7 @@
       "description": ""
      },
      {
-      "date": "2026-11-12 00:00:00",
+      "date": "2026-11-13 00:00:00",
       "description": "Conference start"
      },
      {
@@ -24075,7 +24151,7 @@
     "location": "Brisbane, Australia",
     "timeline": [
      {
-      "date": "2027-06-06 23:59:00-12:00",
+      "date": "2027-06-06 23:59:59-12:00",
       "description": "Full papers; dates are tentative and subject to change"
      },
      {
@@ -25231,7 +25307,7 @@
       "description": "Conference start"
      },
      {
-      "date": "2027-04-30 00:00:00",
+      "date": "2027-04-28 00:00:00",
       "description": "Conference end"
      }
     ]
@@ -25572,6 +25648,24 @@
       "description": "Conference end"
      }
     ]
+   },
+   "2027": {
+    "link": "https://icml.cc/Conferences/2027",
+    "location": "Riocentro, Rio de Janeiro, Brazil",
+    "timeline": [
+     {
+      "date": "2027-01-22 23:59:59-12:00",
+      "description": ""
+     },
+     {
+      "date": "2027-08-02 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-08-04 00:00:00",
+      "description": "Conference end"
+     }
+    ]
    }
   },
   "description": "International Conference on Machine Learning",
@@ -25672,6 +25766,24 @@
      },
      {
       "date": "2026-10-07 00:00:00",
+      "description": "Conference end"
+     }
+    ]
+   },
+   "2027": {
+    "link": "https://www.icmla-conference.org/icmla27/",
+    "location": "University of Miami, Coral Gables Campus, Miami, Florida, USA",
+    "timeline": [
+     {
+      "date": "2027-05-15 23:59:59-07:00",
+      "description": "Main Conference Papers DDL."
+     },
+     {
+      "date": "2027-12-14 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-12-16 00:00:00",
       "description": "Conference end"
      }
     ]
@@ -26524,7 +26636,7 @@
     "timeline": [
      {
       "date": "2027-03-08 23:59:59-12:00",
-      "description": "All dates tentative; March 1 is paper registration; author rebuttal April 23 (provisional, cutoff unspecified)"
+      "description": "All dates tentative; March 1 is paper registration; author rebuttal May 17 (provisional, cutoff unspecified)"
      }
     ]
    }
@@ -26717,128 +26829,37 @@
    "2021": {
     "link": "https://ics21.github.io/",
     "location": "Virtual",
-    "timeline": [
-     {
-      "date": "2021-02-04 23:59:59-12:00",
-      "description": ""
-     },
-     {
-      "date": "2021-06-15 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2021-06-17 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2022": {
     "link": "https://ics2022.github.io/",
     "location": "Virtual",
-    "timeline": [
-     {
-      "date": "2022-02-04 23:59:59-12:00",
-      "description": ""
-     },
-     {
-      "date": "2022-06-28 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2022-06-30 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2023": {
     "link": "https://nschiele.github.io/ICS2023/",
     "location": "Orlando, Florida, USA",
-    "timeline": [
-     {
-      "date": "2023-02-03 23:59:59-12:00",
-      "description": ""
-     },
-     {
-      "date": "2023-06-21 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2023-06-23 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2024": {
     "link": "https://ics2024.github.io/",
     "location": "Kyoto University, Kyoto, Japan",
-    "timeline": [
-     {
-      "date": "2024-01-18 23:59:59-12:00",
-      "description": ""
-     },
-     {
-      "date": "2024-06-05 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2024-06-07 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2025": {
     "link": "https://hpcrl.github.io/ICS2025-webpage/",
     "location": "Salt Lake City, U.S.A.",
-    "timeline": [
-     {
-      "date": "2025-01-16 23:59:59-12:00",
-      "description": "Cycle 1"
-     },
-     {
-      "date": "2025-02-27 23:59:59-12:00",
-      "description": "Cycle 2"
-     },
-     {
-      "date": "2025-06-09 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2025-06-11 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2026": {
     "link": "https://dipsa-qub.github.io/ICS2026-webpage/",
     "location": "Belfast, Northern Ireland, United Kingdom",
-    "timeline": [
-     {
-      "date": "2025-12-16 23:59:59-12:00",
-      "description": "Cycle 1"
-     },
-     {
-      "date": "2026-02-09 23:59:59-12:00",
-      "description": "Cycle 2"
-     },
-     {
-      "date": "2026-07-07 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2026-07-09 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2027": {
     "link": "https://ics-conference.org/index.html",
     "location": "Atlanta, Georgia, USA",
-    "timeline": [
-     {
-      "date": "2026-12-07 23:59:59-12:00",
-      "description": ""
-     }
-    ]
+    "timeline": []
    }
   },
   "description": "ACM International Conference on Supercomputing",
@@ -26847,6 +26868,73 @@
    "ccf": "B",
    "core": "A",
    "thcpl": "B"
+  }
+ },
+ "icse-chase__CATEngineering": {
+  "acceptance_statistics": {},
+  "category": "Software Engineering",
+  "conferences": {
+   "2025": {
+    "link": "https://conf.researchr.org/home/chase-2025",
+    "location": "Ottawa, Ontario, Canada",
+    "timeline": [
+     {
+      "date": "2024-11-09 23:59:59-12:00",
+      "description": ""
+     },
+     {
+      "date": "2025-04-27 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2025-04-28 00:00:00",
+      "description": "Conference end"
+     }
+    ]
+   },
+   "2026": {
+    "link": "https://conf.researchr.org/home/chase-2026",
+    "location": "Rio De Janeiro, Brazil",
+    "timeline": [
+     {
+      "date": "2025-10-23 23:59:59-12:00",
+      "description": ""
+     },
+     {
+      "date": "2026-04-13 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2026-04-14 00:00:00",
+      "description": "Conference end"
+     }
+    ]
+   },
+   "2027": {
+    "link": "https://conf.researchr.org/home/chase-2027",
+    "location": "Dublin, Ireland",
+    "timeline": [
+     {
+      "date": "2026-10-30 23:59:59-12:00",
+      "description": ""
+     },
+     {
+      "date": "2027-04-26 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-04-27 00:00:00",
+      "description": "Conference end"
+     }
+    ]
+   }
+  },
+  "description": "International Conference on Cooperative and Human Aspects of Software Engineering",
+  "name": "ICSE-CHASE",
+  "rankings": {
+   "ccf": "N",
+   "core": "B",
+   "thcpl": "N"
   }
  },
  "icse__CATEngineering": {
@@ -27151,7 +27239,7 @@
     "location": "Toronto, Canada",
     "timeline": [
      {
-      "date": "2027-03-05 23:59:59-12:00",
+      "date": "2027-02-26 23:59:59-12:00",
       "description": "Research Papers Track"
      },
      {
@@ -28621,7 +28709,7 @@
     "location": "New Delhi, India",
     "timeline": [
      {
-      "date": "2026-10-10 23:59:59-12:00",
+      "date": "2026-10-25 23:59:59-12:00",
       "description": "Submission Deadline"
      },
      {
@@ -29322,7 +29410,7 @@
       "description": "Conference start"
      },
      {
-      "date": "2026-11-10 00:00:00",
+      "date": "2026-11-08 00:00:00",
       "description": "Conference end"
      }
     ]
@@ -29964,6 +30052,39 @@
    "thcpl": "N"
   }
  },
+ "intellisys__CATArtificialIntelligence": {
+  "acceptance_statistics": {},
+  "category": "Artificial Intelligence",
+  "conferences": {
+   "2027": {
+    "link": "https://saiconference.com/IntelliSys",
+    "location": "Amsterdam, Netherlands",
+    "timeline": [
+     {
+      "date": "2026-11-15 23:59:59-12:00",
+      "description": "Round 1"
+     },
+     {
+      "date": "2026-12-01 23:59:59-12:00",
+      "description": "Round 2"
+     },
+     {
+      "date": "2027-09-02 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-09-03 00:00:00",
+      "description": "Conference end"
+     }
+    ]
+   }
+  },
+  "description": "Intelligent Systems Conference",
+  "name": "IntelliSys",
+  "rankings": {
+   "ccf": "N"
+  }
+ },
  "interact__CATHumanInteraction": {
   "acceptance_statistics": {
    "2023": {
@@ -30322,8 +30443,8 @@
     "location": "S\u00e3o Paulo, Brazil",
     "timeline": [
      {
-      "date": "2027-02-09 23:59:59+00:00",
-      "description": ""
+      "date": "2027-02-10 11:59:59+00:00",
+      "description": "Regular papers; rebuttal April 13-20. Date-only milestones use AoE end-of-day convention, converted to UTC."
      },
      {
       "date": "2027-08-29 00:00:00",
@@ -30731,7 +30852,7 @@
       "description": "Paper submission deadline: March 1, 2027; exact cutoff time and timezone not specified on the official IEEE RAS event page"
      },
      {
-      "date": "2027-09-26 00:00:00",
+      "date": "2027-09-27 00:00:00",
       "description": "Conference start"
      },
      {
@@ -31747,6 +31868,11 @@
       "description": "Conference end"
      }
     ]
+   },
+   "2027": {
+    "link": "https://www.ieeeismar.net/2027/",
+    "location": "Kobe, Japan",
+    "timeline": []
    }
   },
   "description": "International Symposium on Mixed and Augmented Reality",
@@ -32151,6 +32277,24 @@
      },
      {
       "date": "2026-04-28 00:00:00",
+      "description": "Conference end"
+     }
+    ]
+   },
+   "2027": {
+    "link": "https://ispass.org/2027/",
+    "location": "New York City, USA",
+    "timeline": [
+     {
+      "date": "2026-12-18 23:59:59-12:00",
+      "description": ""
+     },
+     {
+      "date": "2027-05-09 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-05-11 00:00:00",
       "description": "Conference end"
      }
     ]
@@ -32899,6 +33043,20 @@
      },
      {
       "date": "2026-10-29 00:00:00",
+      "description": "Conference end"
+     }
+    ]
+   },
+   "2027": {
+    "link": "https://iswc2027.semanticweb.org/",
+    "location": "Montevideo, Uruguay",
+    "timeline": [
+     {
+      "date": "2027-10-24 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-10-28 00:00:00",
       "description": "Conference end"
      }
     ]
@@ -34105,6 +34263,10 @@
     "location": "Montr\u00e9al, Canada",
     "timeline": [
      {
+      "date": "2027-01-21 23:59:59-12:00",
+      "description": ""
+     },
+     {
       "date": "2027-06-21 00:00:00",
       "description": "Conference start"
      },
@@ -34282,6 +34444,24 @@
      },
      {
       "date": "2026-07-02 00:00:00",
+      "description": "Conference end"
+     }
+    ]
+   },
+   "2027": {
+    "link": "https://mdm2027.github.io/index.html",
+    "location": "Hamilton, New Zealand",
+    "timeline": [
+     {
+      "date": "2027-01-25 23:59:59-12:00",
+      "description": ""
+     },
+     {
+      "date": "2027-06-28 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-07-01 00:00:00",
       "description": "Conference end"
      }
     ]
@@ -34746,6 +34926,28 @@
       "description": "Conference end"
      }
     ]
+   },
+   "2027": {
+    "link": "https://middleware-conf.github.io/2027/",
+    "location": "Kyoto, Japan",
+    "timeline": [
+     {
+      "date": "2026-12-04 00:00:00-12:00",
+      "description": "Winter cycle"
+     },
+     {
+      "date": "2027-06-04 23:59:59-12:00",
+      "description": "Summer cycle"
+     },
+     {
+      "date": "2027-12-13 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-12-17 00:00:00",
+      "description": "Conference end"
+     }
+    ]
    }
   },
   "description": "International Middleware Conference",
@@ -34882,7 +35084,7 @@
     "location": "Bellevue, Washington, USA",
     "timeline": [
      {
-      "date": "2026-10-30 20:00:00",
+      "date": "2026-10-30 21:00:00",
       "description": ""
      },
      {
@@ -35033,6 +35235,20 @@
      },
      {
       "date": "2026-11-14 00:00:00",
+      "description": "Conference end"
+     }
+    ]
+   },
+   "2027": {
+    "link": "https://2027.acmmm.org/",
+    "location": "Hong Kong SAR, China",
+    "timeline": [
+     {
+      "date": "2027-11-08 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-11-12 00:00:00",
       "description": "Conference end"
      }
     ]
@@ -37155,11 +37371,11 @@
     "timeline": [
      {
       "date": "2026-05-06 23:59:59-12:00",
-      "description": "Summer"
+      "description": "Summer; author rebuttal date tentative; decision is final major-revision notification"
      },
      {
       "date": "2026-08-19 23:59:59-12:00",
-      "description": "Fall"
+      "description": "Fall; decision is final major-revision notification"
      },
      {
       "date": "2027-03-22 00:00:00",
@@ -37293,6 +37509,24 @@
      },
      {
       "date": "2026-05-27 00:00:00",
+      "description": "Conference end"
+     }
+    ]
+   },
+   "2027": {
+    "link": "https://networking.ifip.org/2027/",
+    "location": "Dublin, Ireland",
+    "timeline": [
+     {
+      "date": "2027-01-22 23:59:59-12:00",
+      "description": ""
+     },
+     {
+      "date": "2027-06-13 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-06-16 00:00:00",
       "description": "Conference end"
      }
     ]
@@ -37548,7 +37782,7 @@
     "location": "Sydney, Australia; Atlanta, USA; Paris, France",
     "timeline": [
      {
-      "date": "2026-05-07 11:59:00+00:00",
+      "date": "2026-05-07 11:59:59+00:00",
       "description": ""
      }
     ]
@@ -37683,7 +37917,7 @@
     "timeline": [
      {
       "date": "2026-06-20 23:59:59+08:00",
-      "description": ""
+      "description": "Notification expected to be unchanged"
      },
      {
       "date": "2026-11-04 00:00:00",
@@ -39109,7 +39343,7 @@
     "location": "Wellington, New Zealand",
     "timeline": [
      {
-      "date": "2026-11-20 23:59:59-12:00",
+      "date": "2026-12-04 23:59:59-12:00",
       "description": ""
      },
      {
@@ -43876,7 +44110,7 @@
     "location": "Durham, England, United Kingdom",
     "timeline": [
      {
-      "date": "2026-10-30 23:59:59-12:00",
+      "date": "2026-11-04 23:59:59-12:00",
       "description": "First Cycle"
      },
      {
@@ -45258,110 +45492,32 @@
    "2021": {
     "link": "https://ifipsec.org/2021/",
     "location": "Oslo, Norway",
-    "timeline": [
-     {
-      "date": "2021-02-15 23:59:59-12:00",
-      "description": "Submission Deadline"
-     },
-     {
-      "date": "2021-06-22 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2021-06-24 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2022": {
     "link": "https://ifipsec2022.compute.dtu.dk/",
     "location": "Copenhagen, Denmark (Hybrid)",
-    "timeline": [
-     {
-      "date": "2022-02-03 23:59:59-12:00",
-      "description": ""
-     },
-     {
-      "date": "2022-06-13 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2022-06-15 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2023": {
     "link": "https://ifipsec2023.psnc.pl/",
     "location": "Poznan, Poland",
-    "timeline": [
-     {
-      "date": "2023-03-12 23:59:59-12:00",
-      "description": ""
-     },
-     {
-      "date": "2023-06-14 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2023-06-16 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2024": {
     "link": "https://history.ifipsec.org/archive/2024/",
     "location": "Edinburgh, UK",
-    "timeline": [
-     {
-      "date": "2024-03-01 23:59:59-12:00",
-      "description": ""
-     },
-     {
-      "date": "2024-06-12 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2024-06-14 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2025": {
     "link": "https://sec2025.um.si/",
     "location": "Hotel City, Maribor, Slovenia",
-    "timeline": [
-     {
-      "date": "2025-01-20 23:59:59-12:00",
-      "description": "Submission deadline"
-     },
-     {
-      "date": "2025-05-21 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2025-05-23 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2026": {
     "link": "https://ifipsec.org/index.html",
     "location": "Perth, Australia",
-    "timeline": [
-     {
-      "date": "2025-12-19 23:59:59-12:00",
-      "description": "Submission deadline"
-     },
-     {
-      "date": "2026-06-09 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2026-06-11 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2027": {
     "link": "https://ifipsec.org/",
@@ -46598,124 +46754,37 @@
    "2021": {
     "link": "https://sa2021.siggraph.org/",
     "location": "Tokyo, Japan and Online",
-    "timeline": [
-     {
-      "date": "2021-05-21 22:00:00+00:00",
-      "description": "Registration / full paper"
-     },
-     {
-      "date": "2021-12-14 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2021-12-17 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2022": {
     "link": "https://sa2022.siggraph.org/",
     "location": "EXCO, Daegu, South Korea",
-    "timeline": [
-     {
-      "date": "2022-05-20 23:59:59-12:00",
-      "description": "Registration / full paper"
-     },
-     {
-      "date": "2022-12-06 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2022-12-09 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2023": {
     "link": "https://asia.siggraph.org/2023/",
     "location": "Sydney, Australia",
-    "timeline": [
-     {
-      "date": "2023-05-24 23:59:59-12:00",
-      "description": "Registration / full paper"
-     },
-     {
-      "date": "2023-12-12 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2023-12-15 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2024": {
     "link": "https://asia.siggraph.org/2024/",
     "location": "Tokyo, Japan",
-    "timeline": [
-     {
-      "date": "2024-05-19 23:59:59-12:00",
-      "description": "Registration / full paper"
-     },
-     {
-      "date": "2024-12-03 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2024-12-06 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2025": {
     "link": "https://asia.siggraph.org/2025/",
     "location": "Hong Kong, China",
-    "timeline": [
-     {
-      "date": "2025-05-23 23:59:59-12:00",
-      "description": "Registration / full paper"
-     },
-     {
-      "date": "2025-12-15 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2025-12-18 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2026": {
     "link": "https://asia.siggraph.org/2026/",
     "location": "KLCC, Kuala Lumpur, Malaysia",
-    "timeline": [
-     {
-      "date": "2026-05-12 23:59:59-12:00",
-      "description": "Registration / full paper"
-     },
-     {
-      "date": "2026-12-01 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2026-12-04 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    },
    "2027": {
     "link": "https://asia.siggraph.org/2027/",
     "location": "Tokyo International Forum, Tokyo, Japan",
-    "timeline": [
-     {
-      "date": "2027-11-30 00:00:00",
-      "description": "Conference start"
-     },
-     {
-      "date": "2027-12-03 00:00:00",
-      "description": "Conference end"
-     }
-    ]
+    "timeline": []
    }
   },
   "description": "ACM SIGGRAPH Annual Conference in Asia",
@@ -46867,6 +46936,10 @@
     "link": "https://s2027.siggraph.org/",
     "location": "Anaheim, California",
     "timeline": [
+     {
+      "date": "2027-01-28 22:00:00+00:00",
+      "description": "Submissions form & conflicts / paper deadline (upload deadline Jan 29)"
+     },
      {
       "date": "2027-08-08 00:00:00",
       "description": "Conference start"
@@ -47101,11 +47174,11 @@
       "description": ""
      },
      {
-      "date": "2027-07-18 00:00:00",
+      "date": "2027-07-20 00:00:00",
       "description": "Conference start"
      },
      {
-      "date": "2027-07-24 00:00:00",
+      "date": "2027-07-22 00:00:00",
       "description": "Conference end"
      }
     ]
@@ -47811,6 +47884,24 @@
       "description": "Conference end"
      }
     ]
+   },
+   "2027": {
+    "link": "https://atc.sigops.org/2027/",
+    "location": "Rennes, France",
+    "timeline": [
+     {
+      "date": "2027-01-19 23:59:59-12:00",
+      "description": ""
+     },
+     {
+      "date": "2027-06-28 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-07-01 00:00:00",
+      "description": "Conference end"
+     }
+    ]
    }
   },
   "description": "ACM SIGOPS Annual Technical Conference",
@@ -48260,7 +48351,7 @@
     "location": "Singapore",
     "timeline": [
      {
-      "date": "2027-03-08 23:59:59",
+      "date": "2027-03-08 23:59:59-12:00",
       "description": "Abstract submission is a soft deadline"
      },
      {
@@ -48548,6 +48639,10 @@
     "link": "https://cgweek27.computational-geometry.org/",
     "location": "Bengaluru, India",
     "timeline": [
+     {
+      "date": "2026-12-02 23:59:59-12:00",
+      "description": "Submission registration: November 25, 2026, 23:59 AoE"
+     },
      {
       "date": "2027-06-21 00:00:00",
       "description": "Conference start"
@@ -50838,6 +50933,24 @@
       "description": "Conference end"
      }
     ]
+   },
+   "2027": {
+    "link": "https://uist.acm.org/2027/",
+    "location": "VIECON - Vienna Congress & Convention Center, Vienna, Austria",
+    "timeline": [
+     {
+      "date": "2027-04-07 23:59:59-12:00",
+      "description": ""
+     },
+     {
+      "date": "2027-10-27 00:00:00",
+      "description": "Conference start"
+     },
+     {
+      "date": "2027-10-29 00:00:00",
+      "description": "Conference end"
+     }
+    ]
    }
   },
   "description": "ACM Symposium on User Interface Software and Technology",
@@ -52379,7 +52492,7 @@
       "description": "Second round"
      },
      {
-      "date": "2027-01-04 00:00:00",
+      "date": "2027-01-06 00:00:00",
       "description": "Conference start"
      },
      {
